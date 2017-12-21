@@ -2,6 +2,6 @@
 #define GCD_H
 #include <inttypes.h>
 
-uint64_t gcd(const uint64_t a, const uint64_t b);
+uint64_t gcd(uint64_t a, uint64_t b);
 
 #endif
