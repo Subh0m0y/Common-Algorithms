@@ -19,7 +19,7 @@ bin/gcd_tests: obj/gcd.o obj/gcd_tests.o obj/test.o
 	gcc obj/gcd.o obj/test.o obj/gcd_tests.o -o bin/gcd_tests
 
 make_directories:
-	mkdir ${DIRECTORIES}
+	-mkdir ${DIRECTORIES}
 
 obj/gcd_tests.o: src/gcd_tests.c src/test.h
 	gcc -c src/gcd_tests.c -o obj/gcd_tests.o
@@ -31,5 +31,5 @@ obj/%.o: src/%.c src/%.h
 	gcc -c src/$*.c -o obj/$*.o
 
 clean:
-	rm ./obj
-	rm ./bin
+	rm -r ./obj
+	rm -r ./bin
